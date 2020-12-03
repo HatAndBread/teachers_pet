@@ -1,0 +1,57 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import 'variables';
+
+body {
+  background: linear-gradient(45deg, $bg-color, $shadow-color);
+  min-height: 100vh;
+}
+
+.hero {
+  .hero-title {
+    font-family: 'Monoton', sans-serif;
+    font-size: 8vw;
+  }
+  .link-btn {
+    margin-bottom: 8px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 35vh;
+  max-height: 45vh;
+  background-image: linear-gradient(45deg, rgba(55, 54, 31, 0.4), rgba(0, 9, 13, 0.5)), url('title_background.png');
+  background-position: left;
+  background-size: cover;
+  color: snow;
+}
+
+.my-container {
+  display: flex;
+  margin: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.my-card {
+  min-width: 280px;
+  background-color: snow;
+  box-shadow: 0px 0px 8px $shadow-color;
+  border-radius: 4px;
+  color: $my-gray;
+  margin: 24px;
+  .my-card-title {
+    text-align: center;
+    margin: 8px;
+  }
+  .my-card-content {
+    margin: 8px;
+  }
+}
+
+@media (max-width: 1000px) {
+}

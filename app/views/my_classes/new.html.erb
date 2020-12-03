@@ -1,0 +1,19 @@
+<%if @error
+  @error.each do |k, v| 
+    v.each do |message|%>
+      <p><%=message%></p>
+    <%end
+  end
+end%>
+
+<h1>Create a new class</h1>
+
+<%= form_with scope: :my_class, url: my_classes_path, local: true do |form| %>
+  <p>
+    <%= form.label :my_class_title %><br>
+    <%= form.text_field :my_class_title %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

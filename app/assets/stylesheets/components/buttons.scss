@@ -1,0 +1,44 @@
+@import 'variables';
+
+.link-btn {
+  transition: 0.5s;
+  padding: 16px 24px 16px 24px;
+  border-radius: 8px;
+  font-weight: 900;
+  background-color: $btn-color;
+  text-decoration: none;
+  color: snow;
+}
+
+button {
+  transition: 0.5s;
+  padding: 16px 24px 16px 24px;
+  border-radius: 8px;
+  font-weight: 900;
+  background-color: $btn-color;
+  text-decoration: none;
+  color: snow;
+}
+
+input[type='submit'] {
+  transition: 0.5s;
+  padding: 16px 24px 16px 24px;
+  border-radius: 8px;
+  font-weight: 900;
+  background-color: $btn-color;
+  text-decoration: none;
+  color: snow;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lightcoral;
+}
+
+input[type='submit']:hover {
+  background-color: lightcoral;
+}
+
+.link-btn:hover {
+  background-color: lightcoral;
+}
