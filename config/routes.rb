@@ -3,10 +3,21 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :my_classes do
-    resources :students
+  resources :users do
+    resources :my_classes
   end
+
+  resources :my_classes do
+    resources :students, shallow: true
+  end
+
+  resources :students do
+    resources :grades, shallow: true
+    resources :absences, shallow: true
+  end
+
   get 'about', to: 'pages#about'
   get 'sign_up', to: 'pages#sign_up'
+  get 'manage', to: 'pages#manage'
 
 end

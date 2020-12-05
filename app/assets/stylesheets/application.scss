@@ -16,10 +16,22 @@
  *= require components/buttons
  */
 @import 'bootstrap/scss/bootstrap';
+@import 'variables';
 
 body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   font-family: 'Rubik', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: snow;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
 }

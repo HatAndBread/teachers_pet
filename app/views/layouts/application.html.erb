@@ -12,9 +12,15 @@
   </head>
 
   <body>
-  <%unless @home%>
-      <p>HI! Thi isn't the home page!<p>
-    <% end %>
+
+      <nav class="nav-bar">
+        <a href="/"><%= image_tag 'icon.png', class: "home_link" %></a>
+        <%= link_to "Manage classes", '/manage'%>
+        <%= link_to "Take attendance", "#"%>
+        <%= link_to "Random student machine", "#"%>
+        <%= link_to "Random group machine", "#"%>
+      </nav>
+
     <%= yield %>
   </body>
 </html>

@@ -32,13 +32,13 @@ input[type='submit'] {
 }
 
 button:hover {
-  background-color: lightcoral;
+  background-color: $btn-hover-color;
 }
 
 input[type='submit']:hover {
-  background-color: lightcoral;
+  background-color: $btn-hover-color;
 }
 
 .link-btn:hover {
-  background-color: lightcoral;
+  background-color: $btn-hover-color;
 }

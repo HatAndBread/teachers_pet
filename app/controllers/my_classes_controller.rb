@@ -1,4 +1,11 @@
 class MyClassesController < ApplicationController
+    def index
+        @class_titles_and_ids = []
+        @my_classes = MyClass.all
+        @my_classes.each do |my_class|
+            @class_titles_and_ids << {title: my_class.my_class_title, id: my_class.id}
+        end
+    end
     def new
         if params[:error]
             @error = params[:error]
@@ -10,12 +17,13 @@ class MyClassesController < ApplicationController
             @my_class.save
             redirect_to @my_class
         else
-            puts @my_class.errors.messages
             redirect_to action: "new", error: @my_class.errors.messages
         end
     end
     def show
         @my_class = MyClass.find(params[:id])
+        @error = params[:error]
+        @student_list = @my_class.students.all
     end
 
     private

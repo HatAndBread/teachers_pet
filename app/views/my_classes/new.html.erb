@@ -1,5 +1,5 @@
 <%if @error
-  @error.each do |k, v| 
+  @error.each do |k, v|
     v.each do |message|%>
       <p><%=message%></p>
     <%end
@@ -8,12 +8,14 @@ end%>
 
 <h1>Create a new class</h1>
 
-<%= form_with scope: :my_class, url: my_classes_path, local: true do |form| %>
+<%= form_with scope: :my_class, url: my_classes_path, local: true, id: 'class_name_form' do |form| %>
   <p>
     <%= form.label :my_class_title %><br>
-    <%= form.text_field :my_class_title %>
+    <%= form.text_field :my_class_title, id: 'class_name_input' %>
   </p>
   <p>
     <%= form.submit %>
   </p>
 <% end %>
+
+<%= javascript_pack_tag 'my_classes/new' %>

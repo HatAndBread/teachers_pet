@@ -1,0 +1,13 @@
+<div class="title-container">
+<h3>Select a class</h3>
+<div class="class-titles">
+<br>
+    <ul>
+        <% @class_titles_and_ids.each do |my_class| %>
+            <li>⭐️<%= link_to my_class[:title], my_class_path(my_class[:id])%></li>
+        <% end %>
+    </ul>
+</div>
+</div>
+
+<%= javascript_pack_tag 'my_classes/manage' %>

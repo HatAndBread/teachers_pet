@@ -1,17 +1,21 @@
+<%if @error%>
+      <script>alert('First name and last name are required')</script>
+<%end%>
+
 <p>
   <strong>Class name:</strong>
   <%= @my_class.my_class_title %>
 </p>
 
-<div class="add-students-form">
-<%=form_with(model: [@my_class, @my_class.students.build], local: true) do |form|%>
+
+<%=form_with(model: [@my_class, @my_class.students.build], local: true, id: 'add_students_form') do |form|%>
   <p>
   <%=form.label :first_name%><br>
-  <%=form.text_field :first_name%>
+  <%=form.text_field :first_name, id: 'first_name_input'%>
   </p>
   <p>
   <%=form.label :last_name%><br>
-  <%=form.text_field :last_name%>
+  <%=form.text_field :last_name, id: 'first_name_input'%>
   </p>
   <p>
   <%=form.label :birthday%><br>
@@ -23,4 +27,10 @@
   </div>
   <%end%>
 
-<div>
+<%if @student_list
+  @student_list.each do |student|%>
+  <p><%=student.first_name%> <%=student.last_name%></p>
+  <% end
+end%>
+
+<%=javascript_pack_tag 'my_classes/show'%>
