@@ -8,7 +8,7 @@ end%>
 
 <h1>Create a new class</h1>
 
-<%= form_with scope: :my_class, url: my_classes_path, local: true, id: 'class_name_form' do |form| %>
+<%= form_with model: [@user, user.my_classes.build], local: true, id: 'class_name_form' do |form| %>
   <p>
     <%= form.label :my_class_title %><br>
     <%= form.text_field :my_class_title, id: 'class_name_input' %>

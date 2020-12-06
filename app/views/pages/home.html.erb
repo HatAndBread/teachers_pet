@@ -3,6 +3,9 @@
     <%= link_to  "Sign up!", new_user_path, class: 'link-btn' %>
 </div>
 <h2>How it works!</h2>
+<% if logged_in? %>
+    <h1>You are logged in! <%= current_user.username %></h1>
+<% end %>
 
 <div class="my-container">
   <div class="my-card">

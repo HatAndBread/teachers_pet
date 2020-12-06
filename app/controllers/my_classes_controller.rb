@@ -13,6 +13,8 @@ class MyClassesController < ApplicationController
     end
     def create
         @my_class = MyClass.new(my_class_params)
+        p '+++++++++++++++++++++++++++++++++'
+        p my_class_params
         if @my_class.valid?
             @my_class.save
             redirect_to @my_class
